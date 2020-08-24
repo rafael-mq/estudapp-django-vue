@@ -5,8 +5,7 @@
 
 This template is a minimal example for an application using Vue and Django.
 
-It's setup to have a clear separation: use Vue, Yarn, and Webpack to handle all frontend logic and assets bundling,
-and use Django with Django REST framework to manage a Data Models, Web API, and serve static files.
+Vue and Django are clearly separated in this project. Vue, Yarn and Webpack handles all frontend logic and bundling assessments. Django and Django REST framework to manage Data Models, Web API and serve static files.
 
 While it's possible to add endpoints to serve django-rendered html responses, the intention is to use Django primarily for the backend, and have view rendering and routing and handled by Vue + Vue Router as a Single Page Application (SPA).
 
@@ -52,7 +51,7 @@ Prefer Flask? Checkout my [gtalarico/flask-vuejs-template](https://github.com/gt
 | `/src/main.js`       | JS Application Entry Point                 |
 | `/public/index.html` | Html Application Entry Point (`/`)         |
 | `/public/static`     | Static Assets                              |
-| `/dist/`             | Bundled Assets Output (generated at `yarn build` |
+| `/dist/`             | Bundled Assets Output (generated at `yarn build`) |
 
 ## Prerequisites
 
@@ -98,14 +97,32 @@ Proxy config in [`vue.config.js`](/vue.config.js) is used to route the requests
 back to django's API on port 8000.
 
 If you would rather run a single dev server, you can run Django's
-development server only on `:8000`, but you have to build build the Vue app first
+development server only on `:8000`, and you have to build the Vue app first
 and the page will not reload on changes.
 
 ```
 $ yarn build
 $ python manage.py runserver
 ```
+## Pycharm additional configuration
 
+Follow this guide to ensure you have pipenv setup
+
+https://www.jetbrains.com/help/pycharm/pipenv.html
+
+Click "Edit Configurations"
+
+Select Django Server under templates
+
+Click + to create a config from the templates
+
+In Environment variables add
+
+```
+PYTHONUNBUFFERED=1;DJANGO_SETTINGS_MODULE=backend.settings.dev
+```
+
+Click Apply then Ok
 
 ## Deploy
 

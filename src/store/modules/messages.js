@@ -19,8 +19,8 @@ const actions = {
   },
   addMessage({ commit }, message) {
     messageService.postMessage(message)
-    .then(() => {
-      commit('addMessage', message)
+    .then((data) => {
+      commit('addMessage', { ...message, pk: data.pk })
     })
   },
   deleteMessage( { commit }, msgId) {
