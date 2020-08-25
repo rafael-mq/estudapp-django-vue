@@ -1,15 +1,17 @@
 <template>
-  <hello-world />
+  <div class="home">
+    <TeacherSearch />
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import TeacherSearch from "./TeacherSearch";
+// @ is an alias to /src
 
-  export default {
-    name: 'Home',
-
-    components: {
-      HelloWorld,
-    },
+export default {
+  name: "Home",
+  components: {
+    TeacherSearch
   }
+};
 </script>
