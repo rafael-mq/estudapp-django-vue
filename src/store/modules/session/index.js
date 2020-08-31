@@ -5,7 +5,7 @@ const session = {
 
   // module assets
   state: () => ({
-    logged: false,
+    logged: true,
     user: {
       type: USER_TYPE.VISITOR,
       name: "Visitante",

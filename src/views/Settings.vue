@@ -5,7 +5,7 @@
         align="center"
         justify="center"
       >
-        <h1>This is an about page</h1>
+        <h1>Settings page</h1>
       </v-row>
     </v-container>
   </div>

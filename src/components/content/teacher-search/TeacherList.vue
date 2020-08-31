@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-wrap">
+  <div class="d-flex flex-column align-center">
     <v-card
       color="indigo lighten-5"
       v-for="item in teachers"
@@ -68,7 +68,7 @@ export default {
           lastName: "Vieira",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in tellus urna. Integer interdum iaculis feugiat. Vivamus venenatis libero ut.",
-          avatar: "https://i.pravatar.cc/150?img=32",
+          avatar: "https://randomuser.me/api/portraits/women/26.jpg",
           id: "teacher2",
           rating: 4.8
         },
@@ -77,7 +77,7 @@ export default {
           lastName: "Silva",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in tellus urna. Integer interdum iaculis feugiat. Vivamus venenatis libero ut.",
-          avatar: "https://i.pravatar.cc/150?img=7",
+          avatar: "https://randomuser.me/api/portraits/men/78.jpg",
           id: "teacher3",
           rating: 4.8
         }
@@ -97,12 +97,7 @@ export default {
 
 <style scoped>
 .card-list { 
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .card-list {
-    width: 45%;
-  }
+  max-width: 700px;;
 }
 
 </style>

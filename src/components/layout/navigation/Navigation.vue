@@ -1,11 +1,19 @@
 <template>
   <div>
-    <v-app-bar app color="indigo darken-1" dark>
-      <v-app-bar-nav-icon
-        class="hidden-md-and-up"
-        @click="menuBtnClick"
-      ></v-app-bar-nav-icon>
-      <v-spacer class="hidden-md-and-up"></v-spacer>
+    <v-app-bar
+      color="indigo darken-1"
+      app
+      flat
+      dark
+      clipped-left
+    >
+      <template v-if="true">
+        <v-app-bar-nav-icon
+          @click="menuBtnClick"
+        ></v-app-bar-nav-icon>
+        <!-- <v-spacer></v-spacer> -->
+      </template>
+
       <v-toolbar-title class="display-2 font-weight-bold">
         {{ appTitle }}
       </v-toolbar-title>
@@ -14,6 +22,7 @@
         elevation="0"
         color="indigo darken-1"
         class="hidden-sm-and-down ml-4"
+        to="/about"
         >{{ items.aboutLink.title }}</v-btn
       >
       <v-btn
@@ -31,18 +40,20 @@
       >
     </v-app-bar>
 
-    <side-nav :permanent="false" />
+    <!-- <side-nav-student /> -->
+    
   </div>
+
 </template>
 
 <script>
 import { mapState } from "vuex";
-import SideNav from "./SideNav";
+// import SideNavStudent from "./SideNavStudent";
 import { DrawerBus } from "./drawerBus";
 
 export default {
-  name: "Navigation",
-  components: { SideNav },
+  name: "navigation",
+  // components: { SideNavStudent },
   data() {
     return {
       appTitle: "Estud",
