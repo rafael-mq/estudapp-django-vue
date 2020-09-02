@@ -9,7 +9,7 @@
       <router-view></router-view>
     </v-main>
 
-    <v-footer height="60" fixed class="grey">
+    <v-footer height="60" class="grey">
       <v-col
         class="text-center"
         cols="12"
