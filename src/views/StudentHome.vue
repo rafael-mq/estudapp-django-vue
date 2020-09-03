@@ -11,7 +11,7 @@
           <class-list />
         </v-tab-item>
         <v-tab-item>
-          <class-calendar />
+          <class-calendar class="mx-8"/>
         </v-tab-item>
       </v-tabs>
     </v-container>
